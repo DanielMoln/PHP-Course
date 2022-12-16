@@ -13,6 +13,19 @@ try {
     echo inverse(0);
 } catch (Exception $e) {
     echo 'Caught Exception: ' . $e->getMessage();
+} finally {
+    echo 'First finally!';
+}
+
+echo '<br />';
+
+try {
+    echo inverse(5);
+    echo inverse(0);
+} catch (Exception $e) {
+    echo 'Caught Exception: ' . $e->getMessage();
+} finally {
+    echo 'Second finally!';
 }
 
 echo 'Hello world!';
